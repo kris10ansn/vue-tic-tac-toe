@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
+
 import GameBoard from "./GameBoard.vue";
-import { Tic, stringifyTic } from "./Tic";
 import getWinningCells from "./getWinningCells";
+import { Tic, stringifyTic } from "./Tic";
 
 const turn = ref(Tic.X);
 const board = ref(new Array<Tic>(9).fill(0));
