@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import type { Tic } from "./Tic";
 import GameIcon from "./icons/GameIcon.vue";
 
-defineProps<{
-    value: number;
-    highlighted: boolean;
-}>();
+withDefaults(
+    defineProps<{
+        value: Tic;
+        highlighted?: boolean;
+    }>(),
+    { highlighted: false }
+);
 
 const emit = defineEmits(["click"]);
 </script>

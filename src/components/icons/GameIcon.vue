@@ -1,10 +1,12 @@
 <script setup lang="ts">
-defineProps<{ value: number }>();
+import { Tic } from "../Tic";
+
+defineProps<{ value: Tic }>();
 </script>
 
 <template>
     <svg
-        v-if="value === 1"
+        v-if="value === Tic.X"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 384 512"
     >
@@ -15,7 +17,7 @@ defineProps<{ value: number }>();
     </svg>
 
     <svg
-        v-if="value === 2"
+        v-if="value === Tic.O"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
     >
